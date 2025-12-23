@@ -139,5 +139,3 @@ O **Flint** foi criado para ser rápido, elegante e confiável — um verdadeiro
 Desenvolvido com 🧡 e **React Native**.
 
 ```
-
----
