@@ -1,50 +1,143 @@
-# Welcome to your Expo app 👋
+# Flint 🔥
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> **Sua produtividade, organizada.**
 
-## Get started
+O **Flint** é um aplicativo de notas multiplataforma (**Android, iOS e Web**) desenvolvido com foco em simplicidade, velocidade e eficiência.  
+Construído com **React Native** e **Expo**, oferece uma experiência contínua entre dispositivos, com **sincronização em tempo real via Firebase**.
 
-1. Install dependencies
+---
+
+## 📱 Funcionalidades
+
+- 🔐 **Autenticação Segura**  
+  Login e cadastro via **E-mail/Senha** utilizando Firebase Authentication.
+
+- 📝 **Criação de Notas**  
+  Suporte completo à escrita em **Markdown**.
+
+- 🗂️ **Organização Inteligente**  
+  Sistema de **Arquivar** e **Lixeira**, com ações por **gestos (Swipe)**.
+
+- 🌍 **Cross-Platform**
+  - **Mobile:** Interface nativa, fluida e responsiva.
+  - **Web:** Layout otimizado para Desktop (estilo SaaS) + suporte a **PWA**.
+
+- 🌙 **Modo Escuro**  
+  Tema **Enterprise Dark** nativo e consistente em todas as plataformas.
+
+- 💾 **Persistência Híbrida**
+  - Mobile: `AsyncStorage`
+  - Web: `LocalStorage`
+
+---
+
+## 🛠️ Tech Stack
+
+- **Core:** React Native + Expo SDK 52  
+- **Linguagem:** TypeScript  
+- **Navegação:** Expo Router  
+- **Backend & Banco de Dados:** Firebase (Firestore + Authentication)  
+- **Estilização:** StyleSheet nativo, com adaptações condicionais para Web  
+- **Deploy:**
+  - Web: **Vercel**
+  - Mobile: **EAS Build (Android / iOS)**
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+### ✅ Pré-requisitos
+
+Certifique-se de ter instalado:
+
+- Node.js (LTS)
+- Git
+- Expo Go (para testes em dispositivos móveis)
+
+---
+
+### 📦 Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/flint.git
+   cd flint
+````
+
+2. Instale as dependências:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Configure o Firebase:
 
-   ```bash
-   npx expo start
-   ```
+   * O projeto já possui o arquivo `firebaseConfig.ts` (ou `.js`).
+   * Verifique se as chaves de API estão corretas.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### ▶️ Executando Localmente
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Inicie o servidor de desenvolvimento:
 
 ```bash
-npm run reset-project
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+* **Web:** pressione `w` no terminal
+* **Mobile:** escaneie o QR Code com o app **Expo Go** (Android ou iOS)
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🌐 Deploy Web (Vercel)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+O Flint pode ser exportado como um site estático (SPA).
 
-## Join the community
+1. Gere a build de produção:
 
-Join our community of developers creating universal apps.
+   ```bash
+   npx expo export --clear
+   ```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+2. Faça o deploy da pasta `dist`:
+
+   ```bash
+   npx vercel deploy dist --prod
+   ```
+
+> ℹ️ O arquivo `vercel.json` garante o funcionamento correto do roteamento SPA ao atualizar páginas.
+
+---
+
+## 📱 Gerar APK (Android)
+
+Para gerar um APK instalável sem passar pela Play Store:
+
+```bash
+# Requer conta na Expo e EAS CLI instalado
+eas build -p android --profile preview
+```
+
+---
+
+## 📂 Estrutura de Pastas
+
+```txt
+/app          → Telas e rotas (Expo Router)
+/components   → Componentes reutilizáveis
+/services     → Integrações com Firebase (Auth e Firestore)
+/assets       → Imagens, ícones e fontes
+```
+
+---
+
+## ❤️ Considerações Finais
+
+O **Flint** foi criado para ser rápido, elegante e confiável — um verdadeiro **second brain** para o dia a dia.
+
+Desenvolvido com 🧡 e **React Native**.
+
+```
+
+---
