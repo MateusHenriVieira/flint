@@ -136,4 +136,4 @@ eas build -p android --profile preview
 
 O **Flint** foi criado para ser rápido, elegante e confiável — um verdadeiro **second brain** para o dia a dia.
 
-Desenvolvido com 🧡 e **React Native**.
+Desenvolvido por **Mateus Vieira** com 🧡 e **React Native**.
