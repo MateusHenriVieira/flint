@@ -62,7 +62,7 @@ Certifique-se de ter instalado:
    ```bash
    git clone https://github.com/seu-usuario/flint.git
    cd flint
-````
+   ````
 
 2. Instale as dependências:
 
